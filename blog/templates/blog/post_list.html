@@ -4,7 +4,7 @@
         <title>Ishara's blog</title>
     </head>
     <body>
-        <header>
+        <!-- <header>
             <h1><a href="/">Ishara's Blog</a></h1>
         </header>
 
@@ -19,5 +19,22 @@
             <h2><a href="">My second post</a></h2>
             <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
         </article>
+ -->
+
+
+<header>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</header>
+
+{% for post in posts %}
+    <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+{% endfor %}
+
+       <!-- {{ posts }} -->
     </body>
 </html>
+
